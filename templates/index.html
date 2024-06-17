@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>KOPPEE - Coffee Shop HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+   {% include "header.html"%}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="text-primary font-weight-medium m-0">We Have Been Serving</h2>
+                        <h1 class="display-1 text-white m-0">COFFEE</h1>
+                        <h2 class="text-white m-0">* SINCE 2023*</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    {%for i in data%}
+                    <img class="w-100" src="{{i.image.url}}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="text-primary font-weight-medium m-0">We Have Been Serving</h2>
+                        <h1 class="display-1 text-white m-0">COFFEE</h1>
+                        <h2 class="text-white m-0">* SINCE 2023 *</h2>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#blog-carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#blog-carousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h4>
+                <h1 class="display-4">Serving Since 2023</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3">Our Story</h1>
+                    <h5 class="mb-3">Kaldi discovered coffee after he noticed that after eating the berries from a certain tree, his goats became so energetic that they did not want to sleep at night.</h5>
+                    <p>Coffee was introduced to India during the late seventeenth century. The story goes that an Indian pilgrim to Mecca – known as Baba Budan – smuggled seven beans back to India from Yemen in 1670 (it was illegal to take coffee seeds out of Arabia at the time) and planted them in the Chandragiri hills of Karnataka.</p>
+                    <a href="" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                </div>
+                <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="{% static 'img/about.png' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4 py-0 py-lg-5">
+                    <h1 class="mb-3">Our Vision</h1>
+                    <p>Delivering the best experience through ethically-sourced coffee to start your day better</p>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>THE BASE Product Quality</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>THE HEART Sustainability</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>TOP LAYER Day Parting Service</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>THE FOAM Community</h5>
+                    <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Services</h4>
+                <h1 class="display-4">Fresh & Organic Beans</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/service-1.jpg' %}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-truck service-icon"></i>Fastest Door Delivery</h4>
+                            <p class="m-0">Right from placing orders to scheduling pick-ups as well as real-time tracking of their deliveries, Delhivery provides dedicated 24/7 support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/service-2.jpg' %}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
+                            <p class="m-0">The term "green coffee bean" refers to unroasted mature or immature coffee beans.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/service-3.jpg' %}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
+                            <p class="m-0">Quality coffee means the roast is impeccable and the brewing method is flawless. To round it out: the barista gives you the confidence that you're drinking something worth drinking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-5">
+                            <img class="img-fluid mb-3 mb-sm-0" src="{% static 'img/service-4.jpg' %}" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
+                            <p class="m-0">Having an online table booking system ensures guests don't have to wait upon their arrival at the restaurant.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Offer Start -->
+    <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
+        <div class="container py-5">
+            <h1 class="display-3 text-primary mt-3">50% OFF</h1>
+            <h1 class="text-white mb-3">Sunday Special Offer</h1>
+            <h4 class="text-white font-weight-normal mb-4 pb-3">Only for Sunday from 1st April to 30th April  2023</h4>
+            <form class="form-inline justify-content-center mb-4">
+                <div class="input-group">
+                    <input type="text" class="form-control p-4" placeholder="Your Email" style="height: 60px;">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary font-weight-bold px-4" type="submit">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Offer End -->
+
+
+    <!-- Menu Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu & Pricing</h4>
+                <h1 class="display-4">Competitive Pricing</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Hot Coffee</h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-1.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 370</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Black Coffee</h4>
+                            <p class="m-0">black coffee (countable and uncountable, plural black coffees) Coffee served as a beverage without cream or milk.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-2.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 400</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Chocolete Coffee</h4>
+                            <p class="m-0">Chocolate-covered coffee beans are confections made by coating roasted coffee beans in some kind of chocolate, typically milk chocolate but often also dark chocolate or white chocolate. </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-3.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 470</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Coffee With Milk</h4>
+                            <p class="m-0">A drink made out of milk and sold as coffee. The flavor of the coffee is usually masked or hidden by the sugary syrups that are added.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Cold Coffee</h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-1.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 200</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Creamy Iced Coffee</h4>
+                            <p class="m-0">Add flavours to your bland day with a cup of creamy iced coffee. This variation of cold coffee requires the addition of lots of creams. You can add lots of vanilla ice cream to make it creamier. This cold coffee with ice cream is an absolute treat for dessert lovers.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-2.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 250</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Thai Cold Coffee</h4>
+                            <p class="m-0">It is also called Vietnamese Iced coffee and is extremely tasty. The aroma of coffee beans and the goodness of milk in Thai coffee is sure to satiate your taste buds. And the best part about it is you can make it easily at your home.</p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="{% static 'img/menu-3.jpg' %}" alt="">
+                            <h5 class="menu-price">Rs 180</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>Cold Brewed Coffee</h4>
+                            <p class="m-0">This cold-brewed coffee can be made without the addition of hot milk. Just add some cold water to the coffee powder and enjoy the brewing taste of cold-brewed coffee. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu End -->
+
+
+    <!-- Reservation Start -->
+    <div class="container-fluid my-5">
+        <div class="container">
+            <div class="reservation position-relative overlay-top overlay-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 my-5 my-lg-0">
+                        <div class="p-5">
+                            <div class="mb-4">
+                                <h1 class="display-3 text-primary">30% OFF</h1>
+                                <h1 class="text-white">For Online Reservation</h1>
+                            </div>
+                            <p class="text-white">An online reservation system is a software solution that allows customers to book their reservations or appointments online via a company's website or app instead of over the phone or in person.</p>
+                            <ul class="list-inline text-white m-0">
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>offers 24/7 booking</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>create a better guest experience</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>reporting and analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
+                            <h1 class="text-white mb-4 mt-5">Book Your Table</h1>
+                            <form class="mb-5" method="post" action="">
+                                <div class="form-group">
+                                    <input type="text" name="uname" class="form-control bg-transparent border-primary p-4" placeholder="Name"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="uemail" class="form-control bg-transparent border-primary p-4" placeholder="Email"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text" name="udate" class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text" name="utime"  class="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <input type="amount" name="uamount"  class="form-control bg-transparent border-primary p-4" placeholder="Amount"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;">
+                                        <option selected>Person</option>
+                                        <option value="1">Person 1</option>
+                                        <option value="2">Person 2</option>
+                                        <option value="3">Person 3</option>
+                                        <option value="3">Person 4</option>
+                                    </select>
+                                </div>
+
+
+                                <script src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_BIek49HafHJd1R"
+    data-amount="50000"
+    data-currency="INR"
+    data-buttontext="Pay with Razorpay"
+    data-name="Professional Cipher"
+    data-description="Django and Data Science"
+    data-image="https://example.com/your_logo.jpg"
+    data-prefill.name="PC"
+    data-prefill.email="pc@studygyaan.com"
+    data-theme.color="#F37254">
+</script>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h4>
+                <h1 class="display-4">Our Clients Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="{% static 'img/testimonial-1.jpg' %}" alt="">
+                        <div class="ml-3">
+                            <h4>Rutvi</h4>
+                            <i>student</i>
+                        </div>
+                    </div>
+                    <p class="m-0">Good services and service is good</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="{% static 'img/testimonial-2.jpg' %}" alt="">
+                        <div class="ml-3">
+                            <h4>Hit</h4>
+                            <i>python developer</i>
+                        </div>
+                    </div>
+                    <p class="m-0">good</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="{% static 'img/testimonial-3.jpg' %}" alt="">
+                        <div class="ml-3">
+                            <h4>Unnati</h4>
+                            <i>python developer</i>
+                        </div>
+                    </div>
+                    <p class="m-0">Best quality</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid" src="{% static 'img/testimonial-4.jpg' %}" alt="">
+                        <div class="ml-3">
+                            <h4>Hetvik</h4>
+                            <i>student</i>
+                        </div>
+                    </div>
+                    <p class="m-0">service is good</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    {% include "footer.html" %}
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+
+</html>
