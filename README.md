@@ -6,14 +6,14 @@ particular coffee shop. The administrator can handle the data and update informa
 coffees . The Coffee Shop Management System is a web based project. The Aim of Coffee Shop
 Management is communication between rural area people and coffee shop management.
 
--1.1 Background:-
+#1.1 Background:-
 The System “Coffee Shop Management” is an automated system. Coffee Shop Management
 is a web based project. In this system Admin can handle data. In this System admin can handle
 data.
 The Customer can suggest the admin(distributor) to make any change in coffees.The
 administrator can add, update ,delete any information about the system.
 
--1.2 Objective:-
+#1.2 Objective:-
 • To develop a web based system that will help to manage the coffees information about the
 coffees.
 • It takes the suggestion from the user.
@@ -21,13 +21,13 @@ coffees.
 • It take less processing time.
 • To provide the fresh coffee and healthy product to the people.
 
--1.3 Purpose:
+#1.3 Purpose:
 • To handle records easily by saving time and cost.
 • It is a automated process.
 • The main purpose is to provide a fresh coffee.
 • Using this system the coffee products give earning.
 
--1.4 Scope:-
+#1.4 Scope:-
 • System provides a simple interface that would enable owner, manager and customer to navigate and use
 features.
 • Customers can place orders for items of their choice. Based on selected items, recepits would be
@@ -41,7 +41,7 @@ generated.
 • Besides modifying prices of items,the manager also would have access to all features as mentioned for
 the owners.
 
--1.5 Technology & Literature survey/Tools & Technology Tools:-
+#1.5 Technology & Literature survey/Tools & Technology Tools:-
 • PyCharm
 • Django Framework
 • Sqlite3
@@ -51,7 +51,7 @@ the owners.
 • JavaScript
 • Xammpp
 
--1.6 Features:-
+#1.6 Features:-
 • Based on products and components.
 • Easily creating and altering issues.
 • Issue List can be queried in any detail.
